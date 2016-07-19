@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">Tutor+</string>
+    <string name="welcome">Get started </string>
+    <string name="tutoring101">101 TUTORING</string>
+    <string name="help">Help</string>
+    <string name="create_account"><u>Sign Up for Tutor+</u></string>
+    <string name="slogant">While we teach, we learn</string>
+    <string name="bestTutor">Best Tutor in Math</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="fullName">Full name</string>
+    <string name="programStudy">2nd in Computer Science</string>
+    <string name="course1">ITI1500 or ITI1100</string>
+    <string name="course2">ITI1500 or ITI1100</string>
+    <string name="course3">ITI1521 or ITI1121</string>
+    <string name="languages">Speak both French and English</string>
+    <string name="creaditCard">1234 5678 9012 3456</string>
+    <string name="termAndCondition">By creationg an Tutor+ account. You agree to the</string>
+    <string name="condition">Terms, conditions and privacy Policy</string>
+    <string name="menu_icon">Menu</string>
+    <string name="help_icon">Help</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_student_main">StudentMain</string>
+    <string name="title_activity_student_main_page">StudentMainPage</string>
+    <string name="searchable">searchable tutor</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_student__main__page">Student_Main_Page</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- String related to spinner -->
+    <string name="competenceGenie">Choose competences in Engineering</string>
+    <string name="competenceArt">Choose competences in Art</string>
+    <string name="competenceScience">Choose competences in Science</string>
+    <string name="competenceSocialScience">Choose competences in Social Science</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_tutor_main_page">TutorMainPage</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="title_activity_student_details">StudentDetails</string>
+    <string name="school">University of Ottawa</string>
+    <string name="title_activity_tutor_details">TutorDetails</string>
+    <string name="competences">Master in Computer Science</string>
+    <string name="experience">Experience</string>
+    <string name="education">Education</string>
+    <string name="title_activity_registration">Sign in</string>
+    <string name="title_activity_add_competence">AddCompetence</string>
+    <string name="competenceScienceSocial">Choose competences in Social Science</string>
+    <string name="appTitle">Tutor+</string>
+    <string name="title_activity_bill">Bill</string>
+    <string name="title_activity_calendar">Calendar</string>
+    <string name="tutoratPlus">Tutor+</string>
+    <string name="title_activity_courses">Courses</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_my_tutoring">MyTutoring</string>
+</resources>

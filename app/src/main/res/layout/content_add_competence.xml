@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mamadou.tutor.AddCompetence"
+    tools:showIn="@layout/activity_add_competence">
+
+    <TextView
+        android:textColor="@color/black"
+        android:background="@color/whiteForPink"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/title1"
+        android:textSize="25dp"
+        android:text="@string/competenceGenie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/coursEnGenieLayout"
+        android:background="@drawable/mybutton"
+        android:layout_below="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coursEnGenie"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView
+        android:layout_below="@+id/coursEnGenieLayout"
+        android:textColor="@color/black"
+        android:background="@color/whiteForPink"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/title2"
+        android:textSize="25dp"
+        android:text="@string/competenceScience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:background="@drawable/mybutton"
+        android:id="@+id/coursEnScienceLayout"
+        android:layout_below="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coursEnScience"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/title3"
+        android:layout_below="@+id/coursEnScienceLayout"
+        android:textSize="25dp"
+        android:text="@string/competenceArt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:background="@drawable/mybutton"
+        android:layout_below="@+id/title3"
+        android:id="@+id/coursEnArtLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coursEnArt"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:background="@color/whiteForPink"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/title4"
+        android:layout_below="@+id/coursEnArtLayout"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:text="@string/competenceScienceSocial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_marginBottom="15dp"
+        android:id="@+id/coursEnSocialScienceLayout"
+        android:background="@drawable/mybutton"
+        android:layout_below="@+id/title4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coursEnSocialScience"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <Button
+        android:onClick="saveCompetence"
+        android:layout_marginTop="20dp"
+        style="@style/button"
+        android:id="@+id/saveButton"
+        android:layout_centerInParent="true"
+        android:background="@drawable/main_button"
+        android:layout_below="@+id/coursEnSocialScienceLayout"
+        android:textSize="@dimen/titleSize"
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

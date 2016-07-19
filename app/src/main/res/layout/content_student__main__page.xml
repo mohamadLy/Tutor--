@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StudentMainPage"
+    tools:showIn="@layout/activity_student__main__page">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <com.example.mamadou.tutor.CoverFlow
+            android:id="@+id/cf_coverflow"
+            android:background="@drawable/rounded_button_purple_to_white_degrade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="false">
+        </com.example.mamadou.tutor.CoverFlow>
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/title"
+            android:id="@+id/trendingTutors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="@dimen/titleSize"
+            android:gravity="center"
+            android:text="Trending Tutors"
+            android:layout_gravity="center_horizontal" />
+
+        <ListView
+            android:background="@color/white"
+            android:padding="16dp"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewBestTutor"
+            android:layout_above="@+id/linearLayout"
+            android:layout_below="@+id/cf_coverflow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/rounded_button_white_to_purple_degrade"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="0.38">
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/home"
+                android:onClick="onHome"
+                android:src="@drawable/ic_home_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/myCourses"
+                android:onClick="onCourses"
+                android:src="@drawable/ic_school_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/calendarIcon"
+                android:onClick="onCalendar"
+                android:src="@drawable/ic_event_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/account"
+                android:onClick="onBills"
+                android:src="@drawable/ic_account_balance_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:onClick="detailsOnMeStudent"
+                android:id="@+id/registerForTutoring"
+                android:src="@drawable/ic_account_box_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:text="Home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="14dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:text="  courses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="12dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:text=" Calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:text="Bills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginRight="42dp" />
+
+            <TextView
+                android:onClick="detailsOnMeStudent"
+                android:textColor="@color/black"
+                android:text="Me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

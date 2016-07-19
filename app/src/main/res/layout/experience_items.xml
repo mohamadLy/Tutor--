@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/experienceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/experienceTitle"
+            android:textSize="@dimen/titleSize"
+            android:text="@string/experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:paddingLeft="10dp"
+            android:src="@drawable/uottawa_logo"
+            android:layout_below="@+id/experienceTitle"
+            android:id="@+id/companyLogo"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <TextView
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_below="@+id/experienceTitle"
+            android:layout_toRightOf="@+id/companyLogo"
+            android:id="@+id/profession"
+            android:text="Computer Programmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/company"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/companyLogo"
+            android:layout_below="@+id/profession"
+            android:text="University of Ottawa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/yearExperiences"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/companyLogo"
+            android:layout_below="@+id/company"
+            android:text="2011-2012"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/companyLogo"
+            android:layout_below="@+id/yearExperiences"
+            android:text="Ottawa, ON, Canada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/experienceLayout"
+        android:id="@+id/educationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/educationTitle"
+            android:textSize="@dimen/titleSize"
+            android:text="@string/education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:paddingLeft="10dp"
+            android:src="@drawable/uottawa_logo"
+            android:layout_below="@+id/educationTitle"
+            android:id="@+id/establishmentLogo"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_below="@+id/educationTitle"
+            android:layout_toRightOf="@+id/establishmentLogo"
+            android:id="@+id/programOfStudy"
+            android:text="Computer Science"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/establishment"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/establishmentLogo"
+            android:layout_below="@+id/programOfStudy"
+            android:text="University of Ottawa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/year"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/establishmentLogo"
+            android:layout_below="@+id/establishment"
+            android:text="2008-2011"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/establishmentLogo"
+            android:layout_below="@+id/year"
+            android:text="Ottawa, ON, Canada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RatingBar
+        android:layout_marginTop="10dp"
+        android:rating="4.5"
+        android:isIndicator="true"
+        android:id="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/educationLayout"
+        android:numStars="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/allCourses"
+        android:layout_below="@+id/ratingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:text="Tutoring Courses:"
+            android:id="@+id/tutoringTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:text="@string/course1"
+            android:id="@+id/coursesT1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:text="@string/course2"
+            android:id="@+id/courses2T1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:text="@string/course3"
+            android:id="@+id/courses3T2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

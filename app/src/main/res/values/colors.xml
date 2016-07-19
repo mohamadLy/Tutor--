@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#70277B</color> <!-- #6A6AB4 old color 303F9F 00cc00 -->
+    <color name="colorPrimaryDark">#70277B</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="azure">#F0FFFF</color>
+    <color name="black">#000000</color>
+    <color name="SlightGray">#708090</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#ddddbb</color>
+    <color name="pinkLight">#C383C6</color>
+    <color name="pinkDark">#70277B</color>
+    <color name="pink">#A35DB8</color>
+    <color name="whiteForPink">#FEF0FF</color>
+</resources>

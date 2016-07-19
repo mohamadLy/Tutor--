@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mamadou.tutor.TutorMainPage"
+    tools:showIn="@layout/activity_tutor_main_page2">
+
+    <TextView
+        android:background="@color/whiteForPink"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/titleSize"
+        android:textColor="@color/black"
+        android:id="@+id/bestTutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Competences"/>
+    <ImageButton
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/bestTutor"
+        android:id="@+id/imageTutor1"
+        android:src="@drawable/competence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/imageTutor1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:paddingLeft="40dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/addIcon"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="addCompetence"
+            android:layout_toRightOf="@id/addIcon"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:id="@+id/addCompetence"
+            android:text="Add Competence"
+            android:textSize="25dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@drawable/rounded_button_white_to_purple_degrade"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="0.38">
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/home"
+                android:onClick="onHome"
+                android:src="@drawable/ic_home_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/myCourses"
+                android:onClick="onMyTutoring"
+                android:src="@drawable/ic_school_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/calendarIcon"
+                android:onClick="onCalendar"
+                android:src="@drawable/ic_event_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:id="@+id/account"
+                android:onClick="onBills"
+                android:src="@drawable/ic_account_balance_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp" />
+
+            <ImageButton
+                android:background="@drawable/rounded_button_white_to_purple_degrade"
+                android:onClick="detailsOnMe"
+                android:id="@+id/registerForTutoring"
+                android:src="@drawable/ic_account_box_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:text="Home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="14dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:text="  Tutoring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="12dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:text=" Calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:text="Bills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginRight="42dp" />
+
+            <TextView
+                android:onClick="detailsOnMe"
+                android:textColor="@color/black"
+                android:text="Me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
