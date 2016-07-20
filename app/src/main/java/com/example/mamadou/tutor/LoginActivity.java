@@ -33,7 +33,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import utilities.DataBaseAdapter;
-import utilities.LoginDataBaseAdapter;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
