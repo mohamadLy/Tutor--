@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.mamadou.tutor.R;
+
 import utilisateur.DummyData;
 
 public class TutorMainPage extends AppCompatActivity {

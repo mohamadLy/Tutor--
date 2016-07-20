@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.mamadou.tutor.R;
+
 import java.util.LinkedList;
 import java.util.List;
 

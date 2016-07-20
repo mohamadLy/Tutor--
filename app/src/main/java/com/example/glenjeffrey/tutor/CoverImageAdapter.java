@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.example.mamadou.tutor.R;
+
 
 public class CoverImageAdapter extends BaseAdapter {
     int mGalleryItemBackground;

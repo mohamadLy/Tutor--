@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.mamadou.tutor.R;
+
 public class MyTutoring extends AppCompatActivity {
 
     @Override

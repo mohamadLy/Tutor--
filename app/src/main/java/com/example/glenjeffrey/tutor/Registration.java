@@ -28,6 +28,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.mamadou.tutor.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,15 +58,9 @@ public class Registration extends AppCompatActivity implements LoaderCallbacks<C
     private final int TUTOR = 2;
     Utilisateur utilisateur;
     //LoginDataBaseAdapter loginDataBaseAdapter;
-    DataBaseAdapter DataBaseAdapter;
+    DataBaseAdapter dataBaseAdapter;
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -117,8 +113,8 @@ public class Registration extends AppCompatActivity implements LoaderCallbacks<C
         userType = intent.getIntExtra("UserType", 0);
 
         // get Instance  of Database Adapter
-        DataBaseAdapter=new DataBaseAdapter(this);
-        DataBaseAdapter = DataBaseAdapter.open();
+        dataBaseAdapter = new DataBaseAdapter(this);
+        dataBaseAdapter = dataBaseAdapter.open();
     }
 
     private void populateAutoComplete() {
@@ -245,7 +241,7 @@ public class Registration extends AppCompatActivity implements LoaderCallbacks<C
                 utilisateur.setNom(temp[1]);
                 utilisateur.setUsername(username);
                 // Save the Data in Database
-                DataBaseAdapter.insertTable1Data(utilisateur);
+                dataBaseAdapter.insertTableStudentData(utilisateur);
             }
            else if (userType == TUTOR) {
                 //Saving contact data on the database
@@ -258,7 +254,7 @@ public class Registration extends AppCompatActivity implements LoaderCallbacks<C
                 utilisateur.setNom(temp[1]);
                 utilisateur.setUsername(username);
                 // Save the Data in Database
-                DataBaseAdapter.insertTable2Data(utilisateur);
+                dataBaseAdapter.insertTableTutorData(utilisateur);
             }
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
@@ -390,13 +386,7 @@ public class Registration extends AppCompatActivity implements LoaderCallbacks<C
                 return false;
             }
 
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
-                }
-            }
+
 
             // TODO: register the new account here.
             return true;
@@ -440,7 +430,7 @@ public class Registration extends AppCompatActivity implements LoaderCallbacks<C
         // TODO Auto-generated method stub
         super.onDestroy();
 
-        DataBaseAdapter.close();
+        dataBaseAdapter.close();
     }
 }
 

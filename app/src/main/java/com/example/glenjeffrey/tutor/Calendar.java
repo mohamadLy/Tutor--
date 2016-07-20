@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
+import com.example.mamadou.tutor.R;
+
 public class Calendar extends AppCompatActivity {
 
     private CalendarView calendar;
