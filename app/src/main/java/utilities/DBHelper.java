@@ -16,7 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
             "( " +"ID"+" integer primary key autoincrement,"+ "USERNAME  text,PASSWORD text, EMAIL  text, PRENOM  text, NOM  text); ";
 
 
-    public static final String Table2 = "create table "+"LOGIN_STUDENT"+
+    public static final String Table2 = "create table "+"LOGIN_TUTOR"+
             "( " +"ID"+" integer primary key autoincrement,"+ "USERNAME  text,PASSWORD text, EMAIL  text, PRENOM  text, NOM  text); ";
 
 
