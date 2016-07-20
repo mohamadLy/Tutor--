@@ -29,7 +29,7 @@ public class DataBaseAdapter
         dbHelper.close();
     }
 
-    public String getSinlgeEntryTable1(String userName)
+    public String getSinlgeEntryTableStudent(String userName)
     {
         Cursor cursor=database.query("LOGIN_STUDENT", null, " USERNAME=?", new String[]{userName}, null, null, null);
         if(cursor.getCount()<1) // UserName Not Exist
@@ -43,7 +43,7 @@ public class DataBaseAdapter
         return password;
     }
 
-    public String getSinlgeEntryTable2(String userName)
+    public String getSinlgeEntryTableTutor(String userName)
     {
         Cursor cursor=database.query("LOGIN_TUTOR", null, " USERNAME=?", new String[]{userName}, null, null, null);
         if(cursor.getCount()<1) // UserName Not Exist
@@ -75,7 +75,7 @@ public class DataBaseAdapter
     }
 
 
-    public void insertTable1Data(Utilisateur student) {
+    public void insertTableStudentData(Utilisateur student) {
 
         ContentValues newValues = new ContentValues();
         // Assign values for each row.
@@ -92,7 +92,7 @@ public class DataBaseAdapter
 
     }
 
-    public void insertTable2Data(Utilisateur tutor) {
+    public void insertTableTutorData(Utilisateur tutor) {
 
         ContentValues newValues = new ContentValues();
         // Assign values for each row.
