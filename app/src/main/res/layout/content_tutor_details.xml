@@ -8,28 +8,36 @@
     tools:context="com.example.mamadou.tutor.TutorDetails"
     tools:showIn="@layout/activity_tutor_details">
 
-    <LinearLayout
+    <RelativeLayout
+        android:layout_marginTop="200dp"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tutorProfilImage"
             android:layout_gravity="center"
             android:src="@drawable/john_doe"
             android:layout_width="90dp"
             android:layout_height="90dp" />
         <TextView
+            android:id="@+id/tutorFullName"
+            android:layout_below="@+id/tutorProfilImage"
             android:textAlignment="center"
             android:textSize="@dimen/titleSize"
             android:text="@string/fullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/degreeTutor"
+            android:layout_below="@+id/tutorFullName"
             android:textAlignment="center"
             android:textSize="@dimen/titleSize"
             android:text="@string/competences"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
+            android:layout_below="@+id/degreeTutor"
             android:id="@+id/universityTitle"
             android:textAlignment="center"
             android:textSize="@dimen/titleSize"
@@ -49,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="@string/large_text" />
+            android:text="" />
 
-    </LinearLayout>
+    </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

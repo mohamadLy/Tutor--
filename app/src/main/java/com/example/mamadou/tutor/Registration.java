@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -33,8 +34,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import utilisateur.Utilisateur;
 import utilities.DataBaseAdapter;
-import utilities.Utilisateur;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -401,12 +402,16 @@ public class Registration extends AppCompatActivity implements LoaderCallbacks<C
                 if (userType == STUDENT)  {
                     Intent intent = new Intent(Registration.this, StudentMainPage.class);
                     intent.putExtra("UserType", userType);
+                    //To pass:
+                    intent.putExtra("Student", utilisateur);
                     startActivity(intent);
                     finish();
                 }
                 else if (userType == TUTOR) {
                     intent = new Intent(Registration.this, TutorMainPage.class);
                     intent.putExtra("UserType", userType);
+                    //To pass:
+                    intent.putExtra("Tutor", utilisateur);
                     startActivity(intent);
                     finish();
                 }

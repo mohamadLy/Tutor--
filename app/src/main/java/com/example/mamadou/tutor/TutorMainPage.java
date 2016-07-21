@@ -42,25 +42,9 @@ public class TutorMainPage extends AppCompatActivity {
         intent = getIntent();
         idUser = intent.getIntExtra("userId", 0);
 
-        //welcome user
-        welcome();
+
     }
 
-    private void welcome() {
-        userType = intent.getIntExtra("userType", 0);
-        if (userType == STUDENT) {
-            String firstName = DummyData.DUMMY_CREDENTIALS_STUDENT.get(idUser - 1).getPrenom();
-            String lastName = DummyData.DUMMY_CREDENTIALS_STUDENT.get(idUser - 1).getNom();
-            Toast.makeText(TutorMainPage.this, "Bonjour " + firstName + " " + lastName,
-                    Toast.LENGTH_SHORT);
-        }
-        else if(userType == TUTOR){
-            String firstName = DummyData.DUMMY_CREDENTIALS.get(idUser - 1).getPrenom();
-            String lastName = DummyData.DUMMY_CREDENTIALS.get(idUser - 1).getNom();
-            Toast.makeText(TutorMainPage.this, "Bonjour " + firstName + " " + lastName
-                    , Toast.LENGTH_SHORT);
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

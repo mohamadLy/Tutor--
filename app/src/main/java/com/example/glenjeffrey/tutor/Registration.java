@@ -33,8 +33,8 @@ import com.example.mamadou.tutor.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import utilisateur.Utilisateur;
 import utilities.DataBaseAdapter;
-import utilities.Utilisateur;
 
 import static android.Manifest.permission.READ_CONTACTS;
 

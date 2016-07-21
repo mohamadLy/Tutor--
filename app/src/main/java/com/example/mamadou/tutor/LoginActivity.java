@@ -32,6 +32,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import utilisateur.Utilisateur;
 import utilities.DataBaseAdapter;
 
 import static android.Manifest.permission.READ_CONTACTS;
@@ -53,6 +54,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     DataBaseAdapter dataBaseAdapter;
     // username and password from the search result on the database
     private String storedPassword;
+    private Utilisateur utilisateur;
 
 
     /**
@@ -176,9 +178,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // searching username from the database
             // fetch the Password form database for respective user name
             storedPassword = dataBaseAdapter.getSinlgeEntryTableTutor(username);
+
         }
 
-        //usernameAndPassword = result.split(":");
         boolean cancel = false;
         View focusView = null;
 
@@ -217,8 +219,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             focusView.requestFocus();
         } else {
             // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
             showProgress(true);
+            // perform the user login attempt.
+
+            if (userType == STUDENT) {
+                utilisateur = dataBaseAdapter.getStudent();
+            }
+            else {
+                utilisateur = dataBaseAdapter.getTutor();
+            }
             mAuthTask = new UserLoginTask(username, password);
             mAuthTask.execute((Void) null);
         }
@@ -377,12 +386,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 if (userType == STUDENT)  {
                     Intent intent = new Intent(LoginActivity.this, StudentMainPage.class);
                     intent.putExtra("UserType", userType);
+                    //To pass:
+                    intent.putExtra("Student", utilisateur);
                     startActivity(intent);
                     finish();
                 }
                 else if (userType == TUTOR) {
                     Intent intent = new Intent(LoginActivity.this, TutorMainPage.class);
                     intent.putExtra("UserType", userType);
+                    //To pass:
+                    intent.putExtra("Tutor", utilisateur);
                     startActivity(intent);
                     finish();
                 }

@@ -21,6 +21,7 @@ import java.util.List;
 
 import utilisateur.DummyData;
 import utilisateur.Tuteur;
+import utilisateur.Utilisateur;
 
 
 public class StudentMainPage extends AppCompatActivity {
@@ -32,6 +33,7 @@ public class StudentMainPage extends AppCompatActivity {
     private int userType;
     private String Username = "Username";
     private String name = "name";
+    public static Utilisateur student;
     private List<Tuteur> tuteurs = new LinkedList<>();
 
     @Override
@@ -49,7 +51,6 @@ public class StudentMainPage extends AppCompatActivity {
         populateTutor();
         populateListView();
         intent = getIntent();
-        idUser = intent.getIntExtra("idUser", 0);
 
         CoverFlow coverFlow = (CoverFlow) findViewById(R.id.cf_coverflow);
 
@@ -67,24 +68,12 @@ public class StudentMainPage extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
-        //welcome user
-        welcome();
+        Bundle b = getIntent().getExtras();
+        student = b.getParcelable("Student");
+        Toast.makeText(StudentMainPage.this, "Bonjour " + student.getNom(),
+                Toast.LENGTH_LONG).show();
     }
 
-    private void welcome() {
-        userType = intent.getIntExtra("userType", 0);
-        if (userType == STUDENT) {
-            String firstName = intent.getStringExtra(Username);
-            Toast.makeText(StudentMainPage.this, "Bonjour " + firstName,
-                    Toast.LENGTH_LONG).show();
-        }
-        else if(userType == TUTOR){
-            String firstName = DummyData.DUMMY_CREDENTIALS.get(idUser + 1).getPrenom();
-            String lastName = DummyData.DUMMY_CREDENTIALS.get(idUser + 1).getNom();
-            Toast.makeText(StudentMainPage.this, "Bonjour " + firstName + " " + lastName
-                    , Toast.LENGTH_LONG).show();
-        }
-    }
 
     public void populateBill(View view) {
         Intent intent = new Intent(StudentMainPage.this, Bill.class);
@@ -154,6 +143,7 @@ public class StudentMainPage extends AppCompatActivity {
     }
     public void detailsOnMeStudent( View view) {
         Intent intent = new Intent(StudentMainPage.this, StudentDetails.class);
+        //intent.putExtra("student", student);
         startActivity(intent);
     }
 

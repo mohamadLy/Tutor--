@@ -6,12 +6,13 @@ import java.util.List;
 /**
  * Created by mamadou on 7/10/16.
  */
+
 public class DummyData {
 
     public static List<Tuteur> DUMMY_CREDENTIALS = new LinkedList<>();
 
     public static List<Etudiant> DUMMY_CREDENTIALS_STUDENT = new LinkedList<>();
-
+/*
     public DummyData() {
         Utilisateur student1 = new Tuteur("Chris", "Brooks");
         student1.setIdUtilisateur(1);
@@ -40,5 +41,5 @@ public class DummyData {
         student3.setUserName("Katherine_Nichols");
         student3.setEmail("knichols3@opera.com");
         student3.setPassword("sgTZqDkdh");
-    }
+    }*/
 }

@@ -67,24 +67,10 @@ public class StudentMainPage extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
-        //welcome user
-        welcome();
+
     }
 
-    private void welcome() {
-        userType = intent.getIntExtra("userType", 0);
-        if (userType == STUDENT) {
-            String firstName = intent.getStringExtra(Username);
-            Toast.makeText(StudentMainPage.this, "Bonjour " + firstName,
-                    Toast.LENGTH_LONG).show();
-        }
-        else if(userType == TUTOR){
-            String firstName = DummyData.DUMMY_CREDENTIALS.get(idUser + 1).getPrenom();
-            String lastName = DummyData.DUMMY_CREDENTIALS.get(idUser + 1).getNom();
-            Toast.makeText(StudentMainPage.this, "Bonjour " + firstName + " " + lastName
-                    , Toast.LENGTH_LONG).show();
-        }
-    }
+
 
     public void populateBill(View view) {
         Intent intent = new Intent(StudentMainPage.this, Bill.class);
