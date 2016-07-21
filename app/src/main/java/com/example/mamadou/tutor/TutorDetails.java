@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.LinkedList;
@@ -27,7 +28,13 @@ public class TutorDetails extends AppCompatActivity {
 
     private List<Tuteur> experience = new LinkedList<>();
     private Intent intent;
-    int idUser = 0;
+    private TextView myFullName;
+    private TextView myProgramOfStudy;
+    private TextView mySchool;
+    private TextView myEmail;
+    private TextView myUsername;
+    private TextView myPostalCode;
+    private TextView myPhoneNumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +48,6 @@ public class TutorDetails extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().collapseActionView();
 
-        intent = getIntent();
-        idUser = intent.getIntExtra("userId", 0);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +59,22 @@ public class TutorDetails extends AppCompatActivity {
 
         populateTutor();
         populateListView();
+
+        myPostalCode = (TextView) findViewById(R.id.my_postal_codeTutor);
+        myProgramOfStudy = (TextView) findViewById(R.id.degreeTutor);
+        myFullName = (TextView) findViewById(R.id.tutorFullName);
+        myEmail = (TextView) findViewById(R.id.my_emailTutor);
+        mySchool = (TextView) findViewById(R.id.universityTitle);
+        myPhoneNumber = (TextView) findViewById(R.id.my_phone_numberTutor);
+        myUsername = (TextView) findViewById(R.id.userNameTutor);
+
+        myFullName.setText(TutorMainPage.tutor.getPrenom() + " " + TutorMainPage.tutor.getNom());
+        //mySchool.setText(me.getSchool);
+        // myProgramOfStudy.setText(me.getProgramOfStudy);
+        myEmail.setText(TutorMainPage.tutor.getEmail());
+        myUsername.setText(TutorMainPage.tutor.getUsername());
+        //myPostalCode.setText(me.getCodePostal());
+        //myPhoneNumber.setText(me.getNumeroTelephone());
     }
 
     @Override
